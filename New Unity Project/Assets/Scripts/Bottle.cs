@@ -12,21 +12,27 @@ public class Bottle : MonoBehaviour {
 	void Start () {
 		
 	}
-	
-	// Update is called once per frame
-	void Update () {
+
+    // Update is called once per frame
+    void Update()
+    {
         if (isRed)
         {
             if (Input.GetKeyDown(KeyCode.UpArrow))
             {
-                GameObject go = GameObject.Instantiate(bullet, firePos.position, firePos.rotation) as GameObject;
+                GameObject.Instantiate(bullet, firePos.position, firePos.rotation);
             }
-        } else
+        }
+        else
         {
             if (Input.GetKeyDown(KeyCode.Q))
             {
-                GameObject go = GameObject.Instantiate(bullet, firePos.position, firePos.rotation) as GameObject;
+                GameObject.Instantiate(bullet, firePos.position, firePos.rotation);
             }
         }
-	}
+    }
+    public void  TakeDamage(int damage)
+    {
+
+    }
 }
