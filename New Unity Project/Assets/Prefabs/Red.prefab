@@ -11,6 +11,21 @@ Prefab:
   m_ParentPrefab: {fileID: 0}
   m_RootGameObject: {fileID: 1993747914663338}
   m_IsPrefabParent: 1
+--- !u!1 &1576335521786148
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  serializedVersion: 5
+  m_Component:
+  - component: {fileID: 4681414043995676}
+  m_Layer: 0
+  m_Name: FirePos
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
 --- !u!1 &1993747914663338
 GameObject:
   m_ObjectHideFlags: 0
@@ -21,6 +36,9 @@ GameObject:
   - component: {fileID: 4048189008935384}
   - component: {fileID: 212703018710617534}
   - component: {fileID: 95749961718348270}
+  - component: {fileID: 50146889156303602}
+  - component: {fileID: 68072444816318140}
+  - component: {fileID: 114714026991929740}
   m_Layer: 0
   m_Name: Red
   m_TagString: Untagged
@@ -34,13 +52,74 @@ Transform:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1993747914663338}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children: []
+  m_LocalRotation: {x: -0, y: -0, z: 0.6920198, w: 0.7218785}
+  m_LocalPosition: {x: 5, y: -3, z: 0}
+  m_LocalScale: {x: 1.4, y: 1.4, z: 1}
+  m_Children:
+  - {fileID: 4681414043995676}
   m_Father: {fileID: 0}
   m_RootOrder: 0
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 87.58}
+--- !u!4 &4681414043995676
+Transform:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1576335521786148}
+  m_LocalRotation: {x: -0, y: -0, z: 0.1699178, w: 0.98545825}
+  m_LocalPosition: {x: 0.37, y: 0.1, z: 0}
+  m_LocalScale: {x: 0.7142857, y: 0.7142857, z: 1}
+  m_Children: []
+  m_Father: {fileID: 4048189008935384}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 19.566}
+--- !u!50 &50146889156303602
+Rigidbody2D:
+  serializedVersion: 4
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1993747914663338}
+  m_BodyType: 0
+  m_Simulated: 1
+  m_UseFullKinematicContacts: 0
+  m_UseAutoMass: 0
+  m_Mass: 1
+  m_LinearDrag: 0
+  m_AngularDrag: 0.05
+  m_GravityScale: 0
+  m_Material: {fileID: 0}
+  m_Interpolate: 0
+  m_SleepingMode: 1
+  m_CollisionDetection: 0
+  m_Constraints: 0
+--- !u!68 &68072444816318140
+EdgeCollider2D:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1993747914663338}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0}
+  m_EdgeRadius: 0
+  m_Points:
+  - {x: -0.47499996, y: 0}
+  - {x: -0.4, y: -0.24}
+  - {x: -0.19, y: -0.32}
+  - {x: 0.03, y: -0.26}
+  - {x: 0.47499996, y: 0}
+  - {x: 0.4, y: 0.26}
+  - {x: 0.29321703, y: 0.2809567}
+  - {x: 0.15, y: 0.2}
+  - {x: -0.1, y: 0.3}
+  - {x: -0.32, y: 0.26}
+  - {x: -0.4, y: 0.2}
+  - {x: -0.475, y: 0}
 --- !u!95 &95749961718348270
 Animator:
   serializedVersion: 3
@@ -58,6 +137,20 @@ Animator:
   m_WarningMessage: 
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
+--- !u!114 &114714026991929740
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1993747914663338}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 981c37768ac79fc49993ab2d17ee3ddd, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  bullet: {fileID: 1937556389237822, guid: 16e02f1b9c403e04f84557efba14b4e0, type: 2}
+  firePos: {fileID: 4681414043995676}
+  isRed: 1
 --- !u!212 &212703018710617534
 SpriteRenderer:
   m_ObjectHideFlags: 1
@@ -89,8 +182,8 @@ SpriteRenderer:
   m_AutoUVMaxDistance: 0.5
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: 0
-  m_SortingLayer: 0
+  m_SortingLayerID: -1030507727
+  m_SortingLayer: 2
   m_SortingOrder: 0
   m_Sprite: {fileID: 21300000, guid: 5270f04212e37164199465063f63e6d9, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}

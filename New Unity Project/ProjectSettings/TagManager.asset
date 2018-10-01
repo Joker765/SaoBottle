@@ -41,3 +41,9 @@ TagManager:
   - name: Default
     uniqueID: 0
     locked: 0
+  - name: back
+    uniqueID: 299381289
+    locked: 0
+  - name: bottle
+    uniqueID: 3264459569
+    locked: 0
