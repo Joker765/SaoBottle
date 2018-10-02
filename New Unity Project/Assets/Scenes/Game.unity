@@ -553,10 +553,6 @@ Prefab:
       propertyPath: m_RootOrder
       value: 2
       objectReference: {fileID: 0}
-    - target: {fileID: 1002590685189210, guid: aacd8dadcb8b77a4f8a6cd7f0a04dcc7, type: 2}
-      propertyPath: m_TagString
-      value: Red
-      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: aacd8dadcb8b77a4f8a6cd7f0a04dcc7, type: 2}
   m_IsPrefabParent: 0
@@ -694,12 +690,12 @@ Prefab:
     - target: {fileID: 224749819260399934, guid: 7905d83f655825c4fb3b930c012b4e55,
         type: 2}
       propertyPath: m_LocalPosition.x
-      value: 478.5
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 224749819260399934, guid: 7905d83f655825c4fb3b930c012b4e55,
         type: 2}
       propertyPath: m_LocalPosition.y
-      value: 239
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 224749819260399934, guid: 7905d83f655825c4fb3b930c012b4e55,
         type: 2}
@@ -919,7 +915,7 @@ AudioSource:
   m_PlayOnAwake: 1
   m_Volume: 1
   m_Pitch: 1
-  Loop: 0
+  Loop: 1
   Mute: 0
   Spatialize: 0
   SpatializePostEffects: 0
@@ -1108,10 +1104,6 @@ Prefab:
     - target: {fileID: 4969517769260022, guid: 1cd98235d3a36734690ad691a6578530, type: 2}
       propertyPath: m_RootOrder
       value: 3
-      objectReference: {fileID: 0}
-    - target: {fileID: 1257033320272578, guid: 1cd98235d3a36734690ad691a6578530, type: 2}
-      propertyPath: m_TagString
-      value: Blue
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 1cd98235d3a36734690ad691a6578530, type: 2}

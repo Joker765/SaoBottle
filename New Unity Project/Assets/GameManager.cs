@@ -10,9 +10,18 @@ public class GameManager : MonoBehaviour {
     public Text gameOverText;
     public static GameManager Instance;
 
+    private AudioSource confidence;
+
     private void Awake()
     {
         Instance = this;
+        confidence = GetComponent<AudioSource>();
+        if (PlayerPrefs.GetInt("music") == 0) confidence.enabled = false;
+        else
+        {
+            confidence.enabled = true;
+            confidence.volume = PlayerPrefs.GetFloat("volume");
+        }
     }
 
     public void GameOver(bool redWin)

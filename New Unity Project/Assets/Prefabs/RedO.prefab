@@ -22,9 +22,10 @@ GameObject:
   - component: {fileID: 50506509795624638}
   - component: {fileID: 114448516324634134}
   - component: {fileID: 58270861718206268}
+  - component: {fileID: 82089936436222500}
   m_Layer: 0
   m_Name: RedO
-  m_TagString: Untagged
+  m_TagString: Red
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -211,6 +212,86 @@ CapsuleCollider2D:
   m_Offset: {x: -0.00573105, y: 0.029257894}
   m_Size: {x: 0.4645614, y: 0.6520679}
   m_Direction: 0
+--- !u!82 &82089936436222500
+AudioSource:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1002590685189210}
+  m_Enabled: 1
+  serializedVersion: 4
+  OutputAudioMixerGroup: {fileID: 0}
+  m_audioClip: {fileID: 8300000, guid: 4df1a5c6642fdf841b3f33fee78054cc, type: 3}
+  m_PlayOnAwake: 0
+  m_Volume: 1
+  m_Pitch: 1
+  Loop: 0
+  Mute: 0
+  Spatialize: 0
+  SpatializePostEffects: 0
+  Priority: 128
+  DopplerLevel: 1
+  MinDistance: 1
+  MaxDistance: 500
+  Pan2D: 0
+  rolloffMode: 0
+  BypassEffects: 0
+  BypassListenerEffects: 0
+  BypassReverbZones: 0
+  rolloffCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 2
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+    - serializedVersion: 2
+      time: 1
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  panLevelCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 2
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 0
+  spreadCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 2
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  reverbZoneMixCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 2
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 0
 --- !u!95 &95179081583216366
 Animator:
   serializedVersion: 3
@@ -243,7 +324,9 @@ MonoBehaviour:
   firePos: {fileID: 4850225194834510}
   tmpPos: {fileID: 4012542326803820}
   isRed: 1
-  strength: 200
+  underAttackAudio: {fileID: 8300000, guid: 0ed1e2269bfb8c3458f447226131d672, type: 3}
+  impactAudio: {fileID: 8300000, guid: 72533479388ee2a46affe5ba4b107a00, type: 3}
+  fireAudio: {fileID: 8300000, guid: 3891ea167f7474d45ba95f21f0782409, type: 3}
 --- !u!212 &212941143265559642
 SpriteRenderer:
   m_ObjectHideFlags: 1
