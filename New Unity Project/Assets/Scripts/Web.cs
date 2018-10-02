@@ -12,7 +12,7 @@ public class Web : MonoBehaviour {
             grab = collision.GetComponent<Rigidbody2D>();
         else grab = collision.GetComponentInParent<Rigidbody2D>();
 
-        grab.drag = 1f;
+        grab.drag = 2f;
 
     }
 
