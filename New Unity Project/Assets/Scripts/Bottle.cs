@@ -6,33 +6,40 @@ public class Bottle : MonoBehaviour {
 
     public GameObject bullet;
     public Transform firePos;
+    public Transform tmpPos;
     public bool isRed=true;
 
+
+    private float strength = 200f;
+    private int hp;
+    private int maxHp = 100;
+    private Animator animator;
+
 	// Use this for initialization
-	void Start () {
-		
+	void Awake () {
+        hp = maxHp;
+        animator = GetComponentInChildren<Animator>();
 	}
 
     // Update is called once per frame
     void Update()
     {
-        if (isRed)
+        if (  (isRed && Input.GetKeyDown(KeyCode.UpArrow)) ||  (!isRed && Input.GetKeyDown(KeyCode.Q))  )
         {
-            if (Input.GetKeyDown(KeyCode.UpArrow))
-            {
-                GameObject.Instantiate(bullet, firePos.position, firePos.rotation);
-            }
+            GameObject.Instantiate(bullet, firePos.position, firePos.rotation);
+            Vector2 direction = tmpPos.position - firePos.position;
+            this.GetComponent<Rigidbody2D>().AddForceAtPosition(direction * strength, firePos.position);
         }
-        else
-        {
-            if (Input.GetKeyDown(KeyCode.Q))
-            {
-                GameObject.Instantiate(bullet, firePos.position, firePos.rotation);
-            }
-        }
+
     }
     public void  TakeDamage(int damage)
     {
-
+        hp -= damage;
+        if (hp <= 0)
+        {
+            animator.SetTrigger("Dead");
+            Destroy(this.gameObject, 0.6f);
+            GameManager.Instance.GameOver(!isRed);
+        }
     }
 }

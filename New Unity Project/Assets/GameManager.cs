@@ -1,0 +1,30 @@
+﻿using System.Collections;
+using System.Collections.Generic;
+using UnityEngine;
+using UnityEngine.SceneManagement;
+using UnityEngine.UI;
+
+public class GameManager : MonoBehaviour {
+
+    public GameObject gameOverCanvas;
+    public Text gameOverText;
+    public static GameManager Instance;
+
+    private void Awake()
+    {
+        Instance = this;
+    }
+
+    public void GameOver(bool redWin)
+    {
+        gameOverCanvas.SetActive(true);
+        if (redWin) gameOverText.text = "Red Win!";
+        else gameOverText.text = "Blue Win!";
+    }
+
+    public void OnBackButton()
+    {
+        SceneManager.LoadScene(0);
+    }
+
+}

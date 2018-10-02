@@ -9,9 +9,14 @@ public class Alive : MonoBehaviour {
 	void Start () {
 		
 	}
-	
-	// Update is called once per frame
-	void Update () {
+
+    private void OnTriggerEnter2D(Collider2D other)
+    {
+        
+    }
+
+    // Update is called once per frame
+    void Update () {
         timer += Time.deltaTime;
         if (timer > 11.9) Destroy(this.gameObject);
 	}

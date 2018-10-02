@@ -4,7 +4,8 @@ using UnityEngine;
 
 public class Bullet : MonoBehaviour
 {
-    private int damage = 30;
+    public string Enemy;
+    private int damage = 100;
     private float speed = 8;
 
     private void Update()
@@ -12,12 +13,13 @@ public class Bullet : MonoBehaviour
         transform.Translate(new Vector3(1,0) * speed * Time.deltaTime); //局部坐标系，直接前方
     }
 
-    private void OnTriggerEnter(Collider other)
-    {Die();
-        if (other.tag == "Bottle")
+    private void OnTriggerEnter2D(Collider2D other)
+    {
+        if (other.tag == "Wall") Die();
+        else if (other.tag==Enemy)
         {
             other.GetComponent<Bottle>().TakeDamage(damage);
-            
+            Die();
         }
     }
 
