@@ -54,6 +54,7 @@ public class Bottle : MonoBehaviour {
     public void  TakeDamage(int damage)
     {
         hp -= damage;
+        Map.Joker.ChangeHp(isRed, damage);
         if (happyLearn.enabled) happyLearn.PlayOneShot(underAttackAudio);
         if (hp <= 0)
         {

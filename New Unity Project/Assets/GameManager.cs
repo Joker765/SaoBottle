@@ -27,8 +27,14 @@ public class GameManager : MonoBehaviour {
     public void GameOver(bool redWin)
     {
         gameOverCanvas.SetActive(true);
-        if (redWin) gameOverText.text = "Red Win!";
-        else gameOverText.text = "Blue Win!";
+        if (redWin) gameOverText.text = "Red Win !";
+        else gameOverText.text = "Blue Win !";
+    }
+
+    public void Tie()
+    {
+        gameOverCanvas.SetActive(true);
+        gameOverText.text = "TIE !";
     }
 
     public void OnBackButton()

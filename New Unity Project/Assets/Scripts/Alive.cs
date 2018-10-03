@@ -18,6 +18,6 @@ public class Alive : MonoBehaviour {
     // Update is called once per frame
     void Update () {
         timer += Time.deltaTime;
-        if (timer > 11.9) Destroy(this.gameObject);
+        if (timer > 9.9) Destroy(this.gameObject);
 	}
 }
