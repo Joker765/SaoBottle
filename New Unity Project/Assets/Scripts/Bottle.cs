@@ -14,7 +14,9 @@ public class Bottle : MonoBehaviour {
     public AudioClip underAttackAudio;
     public AudioClip impactAudio;
     public AudioClip fireAudio;
+    public AudioClip electricAudio;
 
+   // private LineRenderer electric;
     private bool buff = false;
     private int bulletKind = 0;
     private AudioSource happyLearn;
@@ -64,7 +66,10 @@ public class Bottle : MonoBehaviour {
             switch (bulletKind)
             {
                 case 1: GameObject.Instantiate(bulletBounce, firePos.position, firePos.rotation); break;
-                case 2: GameObject.Instantiate(bulletElectric, firePos.position, firePos.rotation); break;
+                case 2:
+                    GameObject.Instantiate(bulletElectric, firePos.position, firePos.rotation);
+                    if (happyLearn.enabled) happyLearn.PlayOneShot(electricAudio);
+                    break;
                 case 3: GameObject.Instantiate(bulletSplit, firePos.position, firePos.rotation); break;
             }
         }

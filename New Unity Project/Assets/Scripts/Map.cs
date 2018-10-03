@@ -21,7 +21,7 @@ public class Map : MonoBehaviour {
 
 	// Use this for initialization
 	void Awake () {
-        int i = 3;// Random.Range(0, 4);
+        int i = 2;// Random.Range(0, 4);
         GameObject.Instantiate(randomItem[i], Pos.position, Quaternion.identity);
         animator = GetComponentInChildren<Animator>();
         Joker = this;
@@ -35,7 +35,7 @@ public class Map : MonoBehaviour {
         timer += Time.deltaTime;
         if (timer > 10)
         {
-            int i = 3;// Random.Range(0, 4);
+            int i = 2;// Random.Range(0, 4);
             GameObject.Instantiate(randomItem[i], Pos.position, Quaternion.identity);
             time++; timer = 0;
             if (time >= 2)

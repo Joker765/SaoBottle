@@ -323,7 +323,8 @@ MonoBehaviour:
   bullet: {fileID: 1937556389237822, guid: 16e02f1b9c403e04f84557efba14b4e0, type: 2}
   bulletBounce: {fileID: 1614584952582684, guid: 47b7735ae8a4bc546b4ebeecd6790fa7,
     type: 2}
-  bulletElectric: {fileID: 0}
+  bulletElectric: {fileID: 1691169392932654, guid: 6fc138fb4f12d824dbd7e76e788570ad,
+    type: 2}
   bulletSplit: {fileID: 1472872882638334, guid: a807ebb32f6ada044846cd7d36727813,
     type: 2}
   firePos: {fileID: 4850225194834510}
@@ -332,6 +333,7 @@ MonoBehaviour:
   underAttackAudio: {fileID: 8300000, guid: 0ed1e2269bfb8c3458f447226131d672, type: 3}
   impactAudio: {fileID: 8300000, guid: 72533479388ee2a46affe5ba4b107a00, type: 3}
   fireAudio: {fileID: 8300000, guid: 3891ea167f7474d45ba95f21f0782409, type: 3}
+  electricAudio: {fileID: 8300000, guid: c40dc3a3c96f5b74daa4b9396c5a48a4, type: 3}
 --- !u!212 &212941143265559642
 SpriteRenderer:
   m_ObjectHideFlags: 1

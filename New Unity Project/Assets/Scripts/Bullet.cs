@@ -8,17 +8,21 @@ public class Bullet : MonoBehaviour
     public string myName="bullet";
     public GameObject bullet;
 
+    private float timer = 0f;
     private Vector2 direction;
-    private int damage = 40;
+    private int damage = 30;
     private float speed = 8;
 
     private void Start()
     {
-        direction= transform.right;// red axis in world space
+        direction= transform.right; // red axis in world space
     }
 
     private void Update()
     {
+        timer += Time.deltaTime;
+        if (myName == "Electric" && timer > 0.07) Die();else 
+        if (myName == "Bounce" && timer > 10) Die();
         transform.Translate(direction * speed * Time.deltaTime,Space.World); 
     }
 
@@ -46,10 +50,6 @@ public class Bullet : MonoBehaviour
                 else  direction.x = -direction.x;
             }
         }
-        else if (myName=="Electric")
-        {
-
-        }
         else if (myName=="Split")
         {
             if (other.tag == "Wall") { Die(); Split(); }
@@ -59,11 +59,21 @@ public class Bullet : MonoBehaviour
                 Die(); Split();
             }
         }
+        else if (myName == "Electric")
+        if (other.tag==Enemy) other.GetComponent<Bottle>().TakeDamage(damage);
+        
     }
 
     void Split()
     {
-        GameObject.Instantiate(bullet);
+        GameObject.Instantiate(bullet, this.transform.position, Quaternion.Euler(0, 0, 0));
+        GameObject.Instantiate(bullet, this.transform.position, Quaternion.Euler(0, 0, 45));
+        GameObject.Instantiate(bullet, this.transform.position, Quaternion.Euler(0, 0, 90));
+        GameObject.Instantiate(bullet, this.transform.position, Quaternion.Euler(0, 0, 135));
+        GameObject.Instantiate(bullet, this.transform.position, Quaternion.Euler(0, 0, 180));
+        GameObject.Instantiate(bullet, this.transform.position, Quaternion.Euler(0, 0, -135));
+        GameObject.Instantiate(bullet, this.transform.position, Quaternion.Euler(0, 0, -90));
+        GameObject.Instantiate(bullet, this.transform.position, Quaternion.Euler(0, 0, -45));
     }
 
     void Die()
