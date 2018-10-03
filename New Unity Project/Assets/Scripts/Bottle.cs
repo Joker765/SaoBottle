@@ -5,6 +5,9 @@ using UnityEngine;
 public class Bottle : MonoBehaviour {
 
     public GameObject bullet;
+    public GameObject bulletBounce;
+    public GameObject bulletElectric;
+    public GameObject bulletSplit;
     public Transform firePos;
     public Transform tmpPos;
     public bool isRed=true;
@@ -12,6 +15,8 @@ public class Bottle : MonoBehaviour {
     public AudioClip impactAudio;
     public AudioClip fireAudio;
 
+    private bool buff = false;
+    private int bulletKind = 0;
     private AudioSource happyLearn;
     private float strength = 200f;
     private int hp;
@@ -45,16 +50,49 @@ public class Bottle : MonoBehaviour {
         if (  (isRed && Input.GetKeyDown(KeyCode.UpArrow)) ||  (!isRed && Input.GetKeyDown(KeyCode.Q))  )
         {
             if (happyLearn.enabled) happyLearn.PlayOneShot(fireAudio);
-            GameObject.Instantiate(bullet, firePos.position, firePos.rotation);
+            Fire();
             Vector2 direction = tmpPos.position - firePos.position;
             this.GetComponent<Rigidbody2D>().AddForceAtPosition(direction * strength, firePos.position);
         }
-
     }
+
+    private void Fire()
+    {
+        if (buff)
+        {
+            buff = false;
+            switch (bulletKind)
+            {
+                case 1: GameObject.Instantiate(bulletBounce, firePos.position, firePos.rotation); break;
+                case 2: GameObject.Instantiate(bulletElectric, firePos.position, firePos.rotation); break;
+                case 3: GameObject.Instantiate(bulletSplit, firePos.position, firePos.rotation); break;
+            }
+        }
+        else  GameObject.Instantiate(bullet, firePos.position, firePos.rotation);
+    }
+
+    public void KindOfBullet(string s)
+    {
+        switch (s)
+        {
+            case "Bounce": buff = true;  bulletKind = 1;   break;
+            case "Electric":  buff = true; bulletKind=2;     break;
+            case "Split":      buff = true;  bulletKind=3;    break;
+            case "AddHp": AddHp(); break;
+        }
+    }
+
+     public void AddHp()
+    {
+        hp += 70;
+        if (hp > 100) hp = 100;
+        Map.Joker.ChangeHp(isRed,hp);
+    }
+
     public void  TakeDamage(int damage)
     {
         hp -= damage;
-        Map.Joker.ChangeHp(isRed, damage);
+        Map.Joker.ChangeHp(isRed, hp);
         if (happyLearn.enabled) happyLearn.PlayOneShot(underAttackAudio);
         if (hp <= 0)
         {

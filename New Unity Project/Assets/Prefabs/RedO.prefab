@@ -321,6 +321,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   bullet: {fileID: 1937556389237822, guid: 16e02f1b9c403e04f84557efba14b4e0, type: 2}
+  bulletBounce: {fileID: 1614584952582684, guid: 47b7735ae8a4bc546b4ebeecd6790fa7,
+    type: 2}
+  bulletElectric: {fileID: 0}
+  bulletSplit: {fileID: 1472872882638334, guid: a807ebb32f6ada044846cd7d36727813,
+    type: 2}
   firePos: {fileID: 4850225194834510}
   tmpPos: {fileID: 4012542326803820}
   isRed: 1
