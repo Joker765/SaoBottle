@@ -7,6 +7,7 @@ using UnityEngine.UI;
 public class GameManager : MonoBehaviour {
 
     public GameObject gameOverCanvas;
+    public GameObject pauseCanvas;
     public Text gameOverText;
     public static GameManager Instance;
 
@@ -21,6 +22,14 @@ public class GameManager : MonoBehaviour {
         {
             confidence.enabled = true;
             confidence.volume = PlayerPrefs.GetFloat("volume");
+        }
+    }
+
+    private void Update()
+    {
+        if (Input.GetKeyDown(KeyCode.Space))
+        {
+            pauseCanvas.SetActive(true);
         }
     }
 

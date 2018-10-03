@@ -19,9 +19,8 @@ public class Map : MonoBehaviour {
     private int hpBlue;
     private int maxHp=100;
 
-	// Use this for initialization
 	void Awake () {
-        int i = 2;// Random.Range(0, 4);
+        int i = Random.Range(0, 4);
         GameObject.Instantiate(randomItem[i], Pos.position, Quaternion.identity);
         animator = GetComponentInChildren<Animator>();
         Joker = this;
@@ -30,15 +29,14 @@ public class Map : MonoBehaviour {
         hpRed = maxHp;
 	}
 	
-	// Update is called once per frame
 	void Update () {
         timer += Time.deltaTime;
         if (timer > 10)
         {
-            int i = 2;// Random.Range(0, 4);
+            int i = Random.Range(0, 4);
             GameObject.Instantiate(randomItem[i], Pos.position, Quaternion.identity);
             time++; timer = 0;
-            if (time >= 2)
+            if (time >= 3)
             {
                 time = 0; count++;
                 if (count >= 4) Judge();
@@ -46,7 +44,6 @@ public class Map : MonoBehaviour {
             }
         }
 	}
-
 
     public void ChangeHp(bool isRed,int n)
     {
@@ -61,7 +58,6 @@ public class Map : MonoBehaviour {
             blueHpSlider.value = (float)hpBlue/maxHp;
         }
     }
-
 
     void Judge()
     {

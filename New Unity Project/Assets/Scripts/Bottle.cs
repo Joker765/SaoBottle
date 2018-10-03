@@ -16,18 +16,15 @@ public class Bottle : MonoBehaviour {
     public AudioClip fireAudio;
     public AudioClip electricAudio;
 
-   // private LineRenderer electric;
     private bool buff = false;
     private int bulletKind = 0;
     private AudioSource happyLearn;
     private float strength = 200f;
     private int hp;
-    private int maxHp = 100;
     private Animator animator;
 
-	// Use this for initialization
 	void Awake () {
-        hp = maxHp;
+        hp = 100;
         animator = GetComponentInChildren<Animator>();
         happyLearn = GetComponent<AudioSource>();
 
@@ -38,7 +35,6 @@ public class Bottle : MonoBehaviour {
             happyLearn.enabled = true;
             happyLearn.volume = PlayerPrefs.GetFloat("volume");
         }
-
     }
 
     private void OnCollisionEnter2D(Collision2D collision)

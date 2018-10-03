@@ -13,7 +13,6 @@ public class Web : MonoBehaviour {
         else grab = collision.GetComponentInParent<Rigidbody2D>();
 
         grab.drag = 2f;
-
     }
 
     private void OnTriggerExit2D(Collider2D collision)
