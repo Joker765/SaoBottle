@@ -11,8 +11,9 @@ public class Alive : MonoBehaviour {
     {
         if ((other.tag == "Blue") || (other.tag == "Red"))
         {
-            Bottle bottle = other.GetComponent<Bottle>();
-            bottle.KindOfBullet(myName);
+            if(other.GetComponent<Bottle>())
+                other.GetComponent<Bottle>().KindOfBullet(myName);
+            else other.GetComponent<BottleAI>().KindOfBullet(myName);
             Destroy(this.gameObject);
         }
     }

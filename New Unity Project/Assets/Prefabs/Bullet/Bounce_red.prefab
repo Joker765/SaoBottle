@@ -20,7 +20,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4044170988765212}
   - component: {fileID: 212556239820567678}
-  m_Layer: 0
+  m_Layer: 2
   m_Name: RedButtle
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -38,7 +38,7 @@ GameObject:
   - component: {fileID: 58609822242401492}
   - component: {fileID: 114789816996674444}
   - component: {fileID: 50880981336641892}
-  m_Layer: 0
+  m_Layer: 2
   m_Name: Bounce_red
   m_TagString: Untagged
   m_Icon: {fileID: 0}

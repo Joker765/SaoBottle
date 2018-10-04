@@ -22,7 +22,7 @@ GameObject:
   - component: {fileID: 58355834198929646}
   - component: {fileID: 114907645846144330}
   - component: {fileID: 50173406712563664}
-  m_Layer: 0
+  m_Layer: 2
   m_Name: Bounce_blue
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -38,7 +38,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4762391490726478}
   - component: {fileID: 212896495957648206}
-  m_Layer: 0
+  m_Layer: 2
   m_Name: "\u5927\u70AE\u5F39"
   m_TagString: Untagged
   m_Icon: {fileID: 0}

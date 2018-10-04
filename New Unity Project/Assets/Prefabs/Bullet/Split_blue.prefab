@@ -20,7 +20,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4619872825984774}
   - component: {fileID: 212434393881095678}
-  m_Layer: 0
+  m_Layer: 2
   m_Name: "\u5927\u70AE\u5F39"
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -38,7 +38,7 @@ GameObject:
   - component: {fileID: 58417546680543822}
   - component: {fileID: 114152016723274028}
   - component: {fileID: 50531834288530900}
-  m_Layer: 0
+  m_Layer: 2
   m_Name: Split_blue
   m_TagString: Untagged
   m_Icon: {fileID: 0}

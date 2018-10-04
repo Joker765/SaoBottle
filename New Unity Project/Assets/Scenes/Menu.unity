@@ -127,7 +127,7 @@ GameObject:
   - component: {fileID: 20714366}
   - component: {fileID: 20714365}
   m_Layer: 0
-  m_Name: Wecome
+  m_Name: Welcome
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -394,7 +394,7 @@ RectTransform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 371469182}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 478.5, y: 208, z: 0}
+  m_LocalPosition: {x: 525.5, y: 208, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 1747975230}
@@ -732,20 +732,15 @@ Prefab:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: 114256942471385578, guid: c511227bcedd1264ca65d1e6c803e4eb,
-        type: 2}
-      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.size
-      value: 1
-      objectReference: {fileID: 0}
     - target: {fileID: 224153097606290414, guid: c511227bcedd1264ca65d1e6c803e4eb,
         type: 2}
       propertyPath: m_LocalPosition.x
-      value: 478.5
+      value: 525.5
       objectReference: {fileID: 0}
     - target: {fileID: 224153097606290414, guid: c511227bcedd1264ca65d1e6c803e4eb,
         type: 2}
       propertyPath: m_LocalPosition.y
-      value: 239
+      value: 208
       objectReference: {fileID: 0}
     - target: {fileID: 224153097606290414, guid: c511227bcedd1264ca65d1e6c803e4eb,
         type: 2}
@@ -827,34 +822,19 @@ Prefab:
       propertyPath: m_Pivot.y
       value: 0.5
       objectReference: {fileID: 0}
-    - target: {fileID: 1022985266426340, guid: c511227bcedd1264ca65d1e6c803e4eb, type: 2}
-      propertyPath: m_IsActive
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 114256942471385578, guid: c511227bcedd1264ca65d1e6c803e4eb,
-        type: 2}
-      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Mode
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 114256942471385578, guid: c511227bcedd1264ca65d1e6c803e4eb,
-        type: 2}
-      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_CallState
-      value: 2
-      objectReference: {fileID: 0}
-    - target: {fileID: 114256942471385578, guid: c511227bcedd1264ca65d1e6c803e4eb,
+    - target: {fileID: 114556621501779886, guid: c511227bcedd1264ca65d1e6c803e4eb,
         type: 2}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
       objectReference: {fileID: 2013435650}
     - target: {fileID: 114256942471385578, guid: c511227bcedd1264ca65d1e6c803e4eb,
         type: 2}
-      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
-      value: OnTwoPlayerButton
-      objectReference: {fileID: 0}
-    - target: {fileID: 114256942471385578, guid: c511227bcedd1264ca65d1e6c803e4eb,
-        type: 2}
-      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
-      value: UnityEngine.Object, UnityEngine
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 2013435650}
+    - target: {fileID: 1022985266426340, guid: c511227bcedd1264ca65d1e6c803e4eb, type: 2}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: c511227bcedd1264ca65d1e6c803e4eb, type: 2}

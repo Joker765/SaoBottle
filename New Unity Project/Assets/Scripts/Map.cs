@@ -20,7 +20,7 @@ public class Map : MonoBehaviour {
     private int maxHp=100;
 
 	void Awake () {
-        int i = Random.Range(0, 4);
+        int i = 2;// Random.Range(0, 4);
         GameObject.Instantiate(randomItem[i], Pos.position, Quaternion.identity);
         animator = GetComponentInChildren<Animator>();
         Joker = this;

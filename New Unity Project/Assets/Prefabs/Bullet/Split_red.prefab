@@ -22,7 +22,7 @@ GameObject:
   - component: {fileID: 58921000687746706}
   - component: {fileID: 114271578566856914}
   - component: {fileID: 50297837728683230}
-  m_Layer: 0
+  m_Layer: 2
   m_Name: Split_red
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -38,7 +38,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4295894449367222}
   - component: {fileID: 212449843636354830}
-  m_Layer: 0
+  m_Layer: 2
   m_Name: RedButtle
   m_TagString: Untagged
   m_Icon: {fileID: 0}

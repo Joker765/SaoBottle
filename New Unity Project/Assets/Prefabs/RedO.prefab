@@ -54,8 +54,23 @@ GameObject:
   m_Component:
   - component: {fileID: 4653727323119660}
   - component: {fileID: 70305492959345036}
+  m_Layer: 2
+  m_Name: GunBarrel
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!1 &1441183674126588
+GameObject:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  serializedVersion: 5
+  m_Component:
+  - component: {fileID: 4005769949442198}
   m_Layer: 0
-  m_Name: GameObject
+  m_Name: FirePos
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -87,12 +102,25 @@ GameObject:
   m_Component:
   - component: {fileID: 4850225194834510}
   m_Layer: 0
-  m_Name: FirePos
+  m_Name: RayPos
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
+--- !u!4 &4005769949442198
+Transform:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1441183674126588}
+  m_LocalRotation: {x: -0, y: -0, z: 0.18632764, w: 0.98248774}
+  m_LocalPosition: {x: 0.354, y: 0.108, z: 0}
+  m_LocalScale: {x: 0.7142857, y: 0.7142857, z: 1}
+  m_Children: []
+  m_Father: {fileID: 4205901850900374}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 21.477001}
 --- !u!4 &4012542326803820
 Transform:
   m_ObjectHideFlags: 1
@@ -116,8 +144,9 @@ Transform:
   m_LocalPosition: {x: -0.11499977, y: 0.14700007, z: -0.1894492}
   m_LocalScale: {x: 1.400001, y: 1.400001, z: 1}
   m_Children:
-  - {fileID: 4850225194834510}
+  - {fileID: 4005769949442198}
   - {fileID: 4012542326803820}
+  - {fileID: 4850225194834510}
   m_Father: {fileID: 4591710307859392}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 129.255}
@@ -155,13 +184,13 @@ Transform:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1895552065177780}
-  m_LocalRotation: {x: -0, y: -0, z: 0.18632764, w: 0.98248774}
-  m_LocalPosition: {x: 0.354, y: 0.108, z: 0}
+  m_LocalRotation: {x: -0, y: -0, z: 0.16991782, w: 0.98545825}
+  m_LocalPosition: {x: 0.467, y: 0.134, z: 0}
   m_LocalScale: {x: 0.7142857, y: 0.7142857, z: 1}
   m_Children: []
   m_Father: {fileID: 4205901850900374}
-  m_RootOrder: 0
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 21.477001}
+  m_RootOrder: 2
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 19.566}
 --- !u!50 &50506509795624638
 Rigidbody2D:
   serializedVersion: 4
@@ -327,8 +356,10 @@ MonoBehaviour:
     type: 2}
   bulletSplit: {fileID: 1472872882638334, guid: a807ebb32f6ada044846cd7d36727813,
     type: 2}
-  firePos: {fileID: 4850225194834510}
+  firePos: {fileID: 4005769949442198}
   tmpPos: {fileID: 4012542326803820}
+  rayPos: {fileID: 4850225194834510}
+  Enemy: Blue
   isRed: 1
   underAttackAudio: {fileID: 8300000, guid: 0ed1e2269bfb8c3458f447226131d672, type: 3}
   impactAudio: {fileID: 8300000, guid: 72533479388ee2a46affe5ba4b107a00, type: 3}

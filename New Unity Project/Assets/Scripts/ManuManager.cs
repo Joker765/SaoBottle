@@ -25,11 +25,15 @@ public class ManuManager : MonoBehaviour {
 
     public void OnOnePlayerButton()
     {
-
+        PlayerPrefs.SetInt("onePlayer", 1);
+        PlayerPrefs.Save();
+        SceneManager.LoadScene(1);
     }
 
     public void OnTwoPlayerButton()
     {
+        PlayerPrefs.SetInt("onePlayer", 0);
+        PlayerPrefs.Save();
         SceneManager.LoadScene(1);
     }
 

@@ -20,7 +20,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4147026797528010}
   - component: {fileID: 212329841534855774}
-  m_Layer: 0
+  m_Layer: 2
   m_Name: Bullet_red
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -38,7 +38,7 @@ GameObject:
   - component: {fileID: 114875774806022332}
   - component: {fileID: 70255166836145014}
   - component: {fileID: 50566675808508280}
-  m_Layer: 0
+  m_Layer: 2
   m_Name: Bullet_red_T
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -119,6 +119,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Enemy: Blue
+  myName: bullet
+  bullet: {fileID: 0}
 --- !u!212 &212329841534855774
 SpriteRenderer:
   m_ObjectHideFlags: 1

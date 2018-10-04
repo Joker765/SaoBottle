@@ -33,7 +33,9 @@ public class Bullet : MonoBehaviour
             if (other.tag == "Wall") Die();
             else if (other.tag == Enemy)
             {
-                other.GetComponent<Bottle>().TakeDamage(damage);
+                if (other.GetComponent<Bottle>())
+                    other.GetComponent<Bottle>().TakeDamage(damage);
+                else other.GetComponent<BottleAI>().TakeDamage(damage);
                 Die();
             }
         }
@@ -41,27 +43,37 @@ public class Bullet : MonoBehaviour
         {
             if (other.tag == Enemy)
             {
-                other.GetComponent<Bottle>().TakeDamage(damage);
+                if (other.GetComponent<Bottle>())
+                    other.GetComponent<Bottle>().TakeDamage(damage);
+                else other.GetComponent<BottleAI>().TakeDamage(damage);
                 Die();
-            }else if (other.tag == "Wall")
+            }
+            else if (other.tag == "Wall")
             {
                 if (other.name == "HorizontalUp" || other.name == "HorizontalDown")
                     direction.y = -direction.y;
-                else  direction.x = -direction.x;
+                else direction.x = -direction.x;
             }
         }
-        else if (myName=="Split")
+        else if (myName == "Split")
         {
             if (other.tag == "Wall") { Die(); Split(); }
             else if (other.tag == Enemy)
             {
-                other.GetComponent<Bottle>().TakeDamage(damage);
+                if(other.GetComponent<Bottle>())
+                    other.GetComponent<Bottle>().TakeDamage(damage);
+                else other.GetComponent<BottleAI>().TakeDamage(damage);
                 Die(); Split();
             }
         }
         else if (myName == "Electric")
-        if (other.tag==Enemy) other.GetComponent<Bottle>().TakeDamage(damage);
-        
+        {
+            if (other.tag == Enemy)
+                if (other.GetComponent<Bottle>())
+                    other.GetComponent<Bottle>().TakeDamage(damage);
+                else other.GetComponent<BottleAI>().TakeDamage(damage);
+            print(other.name+"!!!");
+        }
     }
 
     void Split()
