@@ -5,12 +5,11 @@ using UnityEngine.UI;
 
 public class MusicManager : MonoBehaviour
 {
-    [SerializeField]
-    private Toggle toggle;
+    public  Toggle toggle;
+    public Slider volume;
     [SerializeField]
     private AudioSource BGM;
-    [SerializeField]
-    private Slider volume;
+    
 
     public void Awake()
     {

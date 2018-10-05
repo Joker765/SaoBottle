@@ -61,7 +61,7 @@ public class BottleAI : MonoBehaviour
             if (hit.collider.tag == Enemy) { timer = 0; Fire(); }
         }
 
-        if (timer > 0.8)   //自动吃Buff
+        if (timer > 0.4)   //自动吃Buff
         {
             RaycastHit2D hit = Physics2D.Raycast(rayPos.position, -rayPos.right,Mathf.Infinity , 1 << LayerMask.NameToLayer("Buff"));
             if (hit.collider != null) { timer = 0; Fire(); }
