@@ -94,10 +94,9 @@ public class Bottle : MonoBehaviour {
 
     void Electric()
     {
-        RaycastHit2D hit = Physics2D.Raycast(rayPos.position, rayPos.right);
+        RaycastHit2D hit = Physics2D.Raycast(rayPos.position, rayPos.right,Mathf.Infinity,1<<LayerMask.NameToLayer("Bottle"));
 
-        //If something was hit, the RaycastHit2D.collider will not be null.
-        if (hit.collider.tag==Enemy)
+        if (hit.collider!=null)
         {
             if (hit.collider.GetComponent<Bottle>())
                 hit.collider.GetComponent<Bottle>().TakeDamage(40);

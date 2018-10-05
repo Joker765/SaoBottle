@@ -53,10 +53,7 @@ public class BottleAI : MonoBehaviour
         if (timer > 3)
         {
             timer = 0;
-            if (happyLearn.enabled) happyLearn.PlayOneShot(fireAudio);
             Fire();
-            Vector2 direction = tmpPos.position - firePos.position;
-            this.GetComponent<Rigidbody2D>().AddForceAtPosition(direction * strength, firePos.position);
         }
 
         if (timer > 1.5) { 
@@ -64,16 +61,13 @@ public class BottleAI : MonoBehaviour
             if (hit.collider.tag == Enemy) { timer = 0; Fire(); }
         }
 
-       /* if (timer > 0.8)
+        if (timer > 0.8)   //自动吃Buff
         {
-            RaycastHit2D hit = Physics2D.Raycast(rayPos.position, -rayPos.right,Mathf.Infinity,9);
-            if (hit.collider != null)
-            {
-                print(hit.collider.name);
-                if (hit.collider.tag == "Buff"|| hit.collider.tag==Enemy) { timer = 0; Fire(); }
-            }
-        }*/
+            RaycastHit2D hit = Physics2D.Raycast(rayPos.position, -rayPos.right,Mathf.Infinity , 1 << LayerMask.NameToLayer("Buff"));
+            if (hit.collider != null) { timer = 0; Fire(); }
+        }
     }
+
     private void Fire()
     {
         if (buff)
@@ -81,7 +75,10 @@ public class BottleAI : MonoBehaviour
             buff = false;
             switch (bulletKind)
             {
-                case 1: GameObject.Instantiate(bulletBounce, firePos.position, firePos.rotation); break;
+                case 1:
+                    if (happyLearn.enabled) happyLearn.PlayOneShot(fireAudio);
+                    GameObject.Instantiate(bulletBounce, firePos.position, firePos.rotation);
+                    break;
                 case 2:
                     electricFireTime++;
                     if (electricFireTime < 5) buff = true;
@@ -90,21 +87,25 @@ public class BottleAI : MonoBehaviour
                     if (happyLearn.enabled) happyLearn.PlayOneShot(electricAudio);
                     Electric();
                     break;
-                case 3: GameObject.Instantiate(bulletSplit, firePos.position, firePos.rotation); break;
+                case 3:
+                    if (happyLearn.enabled) happyLearn.PlayOneShot(fireAudio);
+                    GameObject.Instantiate(bulletSplit, firePos.position, firePos.rotation);
+                    break;
             }
         }
-        else GameObject.Instantiate(bullet, firePos.position, firePos.rotation);
+        else {
+            if (happyLearn.enabled) happyLearn.PlayOneShot(fireAudio);
+            GameObject.Instantiate(bullet, firePos.position, firePos.rotation);
+        }
+        Vector2 direction = tmpPos.position - firePos.position;
+        this.GetComponent<Rigidbody2D>().AddForceAtPosition(direction * strength, firePos.position);
     }
 
     void Electric()
     {
-        RaycastHit2D hit = Physics2D.Raycast(rayPos.position, rayPos.right);
-
-        //If something was hit, the RaycastHit2D.collider will not be null.
-        if (hit.collider.tag == Enemy)
-        {
+        RaycastHit2D hit = Physics2D.Raycast(rayPos.position, rayPos.right, Mathf.Infinity, 1 << 9);
+        if (hit.collider != null)
             hit.collider.GetComponent<Bottle>().TakeDamage(40);
-        }
     }
 
     public void KindOfBullet(string s)

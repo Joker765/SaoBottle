@@ -22,7 +22,7 @@ GameObject:
   - component: {fileID: 212951667607855070}
   - component: {fileID: 114448559285422748}
   - component: {fileID: 58039327355988624}
-  m_Layer: 2
+  m_Layer: 10
   m_Name: Electric
   m_TagString: Buff
   m_Icon: {fileID: 0}

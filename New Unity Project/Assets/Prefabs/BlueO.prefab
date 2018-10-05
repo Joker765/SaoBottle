@@ -19,7 +19,7 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 4445694367661612}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: TmpPos
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -54,7 +54,7 @@ GameObject:
   - component: {fileID: 58178206857090456}
   - component: {fileID: 114022904181444020}
   - component: {fileID: 82395785117485054}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: BlueO
   m_TagString: Blue
   m_Icon: {fileID: 0}
@@ -69,7 +69,7 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 4272609909212868}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: FirePos
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -86,7 +86,7 @@ GameObject:
   - component: {fileID: 4296782278674054}
   - component: {fileID: 212142506543191008}
   - component: {fileID: 95192606557626376}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Blue
   m_TagString: Blue
   m_Icon: {fileID: 0}
@@ -101,7 +101,7 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 4240970854887818}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: RayPos
   m_TagString: Untagged
   m_Icon: {fileID: 0}
