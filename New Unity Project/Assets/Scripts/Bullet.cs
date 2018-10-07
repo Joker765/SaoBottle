@@ -21,8 +21,8 @@ public class Bullet : MonoBehaviour
     private void Update()
     {
         timer += Time.deltaTime;
-        if (myName == "Electric" && timer > 0.07) Die();else 
-        if (myName == "Bounce" && timer > 10) Die();
+        if (myName == "Electric" && timer > 0.05) Die();else 
+        if (myName == "Bounce" && timer > 8) Die();
         transform.Translate(direction * speed * Time.deltaTime,Space.World); 
     }
 
